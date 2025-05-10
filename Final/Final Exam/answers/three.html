@@ -1,0 +1,65 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Age Validation</title>
+    <style>
+        
+        input[type="text"] {
+            padding: 10px;
+            font-size: 16px;
+            margin-top: 10px;
+        }
+
+     
+        input.invalid {
+            border: 2px solid red;
+        }
+    </style>
+</head>
+<body>
+      <nav>
+        <a href="one.html">Problem 1</a> |
+        <a href="two.html">Problem 2</a> |
+        <a href="three.html">Problem 3</a> |
+        <a href="four.html">Problem 4</a> |
+        <a href="five.html">Problem 5</a> |
+        <a href="six.html">Problem 6</a> |
+        <a href="seven.html">Problem 7</a> |
+        <a href="eight.html">Problem 8</a> |
+        <a href="nine.html">Problem 9</a>
+    </nav> 
+      <br><br>
+    <h1>Problem 3</h1>
+    <br><br>
+    <h2>Age Validation</h2>
+    <label for="ageInput">Enter your age:</label>
+    <input type="text" id="ageInput">
+    <button onclick="validateAge()">Submit</button>
+
+    <script>
+        function validateAge() {
+            var age = document.getElementById("ageInput").value;
+            var inputElement = document.getElementById("ageInput");
+
+           
+            if (!isNaN(age) && age < 100 && age > 0) {
+                alert("You are " + age + " years old");
+                inputElement.classList.remove("invalid"); 
+            } 
+            
+            else if (age >= 100) {
+                alert("Invalid Input");
+                inputElement.classList.add("invalid"); 
+            } 
+         
+            else {
+                alert("Please enter a valid number");
+                inputElement.classList.add("invalid");
+            }
+        }
+    </script>
+</body>
+</html>
